@@ -1,0 +1,57 @@
+﻿@model Productlist
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<style>
+    .btn1
+    {
+        margin-top:10px;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-center">Add Product</h1>
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-action="create">
+                        <div class="form-group">
+                            <label>ProductId</label>
+                            <input type="text" asp-for="ProductId" placeholder="Enter Id" class="form-control" />
+                            <span asp-validation-for="ProductId" class="text-danger"></span>
+
+                        </div> <br />
+                        <div class="form-group">
+                            <label>ProductName</label>
+                            <input type="text" asp-for="ProductName" placeholder="Enter ProductName" class="form-control" />
+                            <span asp-validation-for="ProductName" class="text-danger"></span>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label>CategoryId</label>
+                            <input type="text" asp-for="CategoryId" placeholder="Enter CategoryId" class="form-control" />
+                            <span asp-validation-for="CategoryId" class="text-danger"></span>
+
+
+                        </div> <br />
+                         <div class="form-group">
+                            <label>CategoryName</label>
+                            <input type="text" asp-for="CategoryName" placeholder="Enter CategoryName" class="form-control" />
+                            <span asp-validation-for="CategoryName" class="text-danger"></span>
+
+                        </div>
+                        <div class="form-group">
+                           
+                            <input type="submit" value="ADD" class="btn btn1 btn-dark  floatleft" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+</div>
+    </div>
+
+    </div>

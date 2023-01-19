@@ -1,0 +1,44 @@
+﻿@model Productlist
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-center">Update Product</h1>
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-action="Edit">
+                        <div class="form-group">
+                            <label>ProductId</label>
+                            <input type="text" asp-for="ProductId" placeholder="Enter ProductId" class="form-control" />
+                        </div> <br />
+                        <div class="form-group">
+                            <label>ProductName</label>
+                            <input type="text" asp-for="ProductName" placeholder="Enter ProductName" class="form-control" />
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label>CategoryId</label>
+                            <input type="text" asp-for="CategoryId" placeholder="Enter CategoryId" class="form-control" />
+                        </div> <br />
+                        <div class="form-group">
+                            <label>CategoryName</label>
+                            <input type="text" asp-for="CategoryName" placeholder="Enter CategoryName" class="form-control" />
+                        </div>
+                        <br />
+                        <div class="form-group">
+
+                            <input type="submit" value="Update" class="btn btn1 btn-dark  floatleft" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

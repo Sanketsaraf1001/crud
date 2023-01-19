@@ -1,0 +1,43 @@
+﻿
+@model IEnumerable<cruddd.Models.Productlist>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h1 class="text-black text-center">Product Record</h1>
+            <a class="btn btn-lg btn-success m-2" asp-controller="Product" asp-action="create">Create</a>
+          <p class="text-center text-danger">@TempData["error"]</p>
+            <table class="table table-bordered">
+               <tr class="text-center text-primary">
+                    <th> ProductId</th>
+                    <th> ProductName</th>
+                    <th> CategoryId</th>
+                    <th> CategoryName</th>
+                     <th>Action</th>
+                    <th>Action</th>
+                   
+               </tr>
+               <tr>
+                   @foreach (var data in Model)
+                    {
+                        <tr >
+                        <td>@data.ProductId</td>
+                        <td>@data.ProductName</td>
+                        <td>@data.CategoryId</td>
+                        <td>@data.CategoryName</td>
+                        <td><a class="btn btn-sm btn-warning" asp-controller="Product" asp-action="Edit" asp-route-id="@data.ProductId">Update</a></td>
+                        <td><a class="btn btn-sm btn-danger" asp-controller="Product" asp-action="Delete" asp-route-id="@data.ProductId">Delete</a></td>
+
+                        </tr>
+                    }
+              </tr>
+            </table>
+        </div>
+
+    </div>
+
+</div>
